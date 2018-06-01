@@ -1,3 +1,7 @@
+require "pry"
+ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+
 def alphabetize(arr)
-  # code here
+  ascii = "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\"
+  arr.sort_by{|word| word.tr(ESPERANTO_ALPHABET, ascii)}
 end
